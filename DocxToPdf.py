@@ -14,11 +14,11 @@ def scanning_dir(path):
     dirs = os.listdir(path)
     for item in dirs:
         f, e = os.path.splitext(path+item)
-        # print("This is a  = ", e)
+
         count = count + 1
         if(e==".docx"):
             docx = docx + 1
-    # print(count)
+
     print(f"{count} files found")
     print(f"{docx} Docxx found")
 
@@ -33,10 +33,16 @@ def convert_to_pdf(path):
         f, e = os.path.splitext(path+item)
         if(e==".docx"):
             print(item)
-            convert("C:/Users/Me/Desktop/WordFiles/"+item)
-            # convert(item, f+".pdf")
+            try:
+                convert("C:/Users/Me/Desktop/WordFiles/"+item)
+            except:
+                print("Unexpected error while converting the .docx file")
+            
+            try:
+                os.remove(f+e)
+            except:
+                print("Unexpected error while deleting the .docx file")
     print("Success")
-
 
 
 scanning_dir(PATH)
