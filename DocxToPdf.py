@@ -37,11 +37,13 @@ def convert_to_pdf(path):
                 convert("C:/Users/Me/Desktop/WordFiles/"+item)
             except:
                 print("Unexpected error while converting the .docx file")
+
+        # Uncomment to delete all the docx files that are converted 
+            # try:
+            #     os.remove(f+e)
+            # except:
+            #     print("Unexpected error while deleting the .docx file")
             
-            try:
-                os.remove(f+e)
-            except:
-                print("Unexpected error while deleting the .docx file")
     print("Success")
 
 
