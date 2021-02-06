@@ -15,5 +15,5 @@ Make the file executable using-
 Execute it using-
 ```./removeSpaces.sh``` and ```./converToPdf.sh```
 
-(Don't forget to chane to the direcotry where the script is!)
+(Don't forget to change to the direcotry where the script is!)
 
